@@ -26,6 +26,10 @@ export default createStore({
                 title: "Button 6",
                 index: 6,
             },
+            {
+                title: "Button 7",
+                index: 7,
+            },
         ],
     },
     mutations: {},
