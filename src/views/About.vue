@@ -2,19 +2,20 @@
   <div class="about">
     <h1>This is the about page</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos
-      at, rerum beatae nisi autem dolores dolor quam dolorum culpa officia
-      dolore blanditiis saepe facilis. Veniam eum dolorem iste molestias
-      similique assumenda alias nulla beatae enim iusto ex soluta excepturi
-      explicabo facilis reprehenderit recusandae dolores molestiae voluptate
-      minima totam doloremque aut amet, ab distinctio! Veritatis facilis
-      similique sit veniam vitae quisquam sunt voluptatibus ut obcaecati,
-      architecto totam eos eligendi et optio quasi repellendus ad nihil.
-      Corrupti modi at aliquam eaque rerum eligendi, ex impedit excepturi dicta
-      iure velit dignissimos ipsa sint esse exercitationem ullam veniam, quae ad
-      sunt, neque ab accusantium fugit sequi hic. Modi dolorum ipsum voluptatum
-      eaque exercitationem, omnis quidem quo sint magnam doloremque obcaecati
-      porro est dolorem libero itaque beatae harum? Pariatur vero enim
+      This website is called The Coding Base, on this website you can find code
+      for developers. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Totam dignissimos at, rerum beatae nisi autem dolores dolor quam dolorum
+      culpa officia dolore blanditiis saepe facilis. Veniam eum dolorem iste
+      molestias similique assumenda alias nulla beatae enim iusto ex soluta
+      excepturi explicabo facilis reprehenderit recusandae dolores molestiae
+      voluptate minima totam doloremque aut amet, ab distinctio! Veritatis
+      facilis similique sit veniam vitae quisquam sunt voluptatibus ut
+      obcaecati, architecto totam eos eligendi et optio quasi repellendus ad
+      nihil. Corrupti modi at aliquam eaque rerum eligendi, ex impedit excepturi
+      dicta iure velit dignissimos ipsa sint esse exercitationem ullam veniam,
+      quae ad sunt, neque ab accusantium fugit sequi hic. Modi dolorum ipsum
+      voluptatum eaque exercitationem, omnis quidem quo sint magnam doloremque
+      obcaecati porro est dolorem libero itaque beatae harum? Pariatur vero enim
       perferendis aspernatur at fugiat veritatis ipsum nihil rerum similique
       illum odio velit, consequatur placeat rem sunt provident alias atque
       necessitatibus molestias quisquam harum ducimus consequuntur quas? Ad
