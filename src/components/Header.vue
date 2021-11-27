@@ -1,25 +1,32 @@
 <template>
   <header>
     <Toggle :mode="mode" @toggle="$emit('toggle')" />
+
     <nav>
-      <router-link :to="{name: 'Home'}" class="nav-link">Home</router-link>
-      <router-link :to="{name: 'About'}" class="nav-link">About</router-link>
-      <router-link :to="{name: 'Library'}" class="nav-link">Library</router-link>
-      <router-link :to="{name: 'Create'}" class="nav-link">Create</router-link>
-      <router-link :to="{name: 'Code Editor'}" class="nav-link">Code Editor</router-link>
+      <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
+      <router-link :to="{ name: 'About' }" class="nav-link">About</router-link>
+      <router-link :to="{ name: 'Library' }" class="nav-link"
+        >Library</router-link
+      >
+      <router-link :to="{ name: 'Create' }" class="nav-link"
+        >Create</router-link
+      >
+      <router-link :to="{ name: 'Code Editor' }" class="nav-link"
+        >Code Editor</router-link
+      >
     </nav>
-    <router-view/>
+    <router-view />
   </header>
 </template>
 
 <script>
-import Toggle from '@/components/Toggle'
+import Toggle from "@/components/Toggle";
 export default {
-  props: ['mode'],
+  props: ["mode"],
   components: {
-    Toggle
-  }
-}
+    Toggle,
+  },
+};
 </script>
 
 <style>
@@ -44,14 +51,6 @@ nav h1 {
   text-transform: uppercase;
   font-weight: 900;
 }
-nav {
-  display: flex;
-  height: 60px;
-}
-nav .nav-link {
-  display: flex;
-  align-items: center;
-}
 header nav a {
   text-decoration: none;
 }
@@ -61,5 +60,4 @@ header nav a {
 .light header nav a {
   color: #15202b;
 }
-
 </style>

@@ -14,7 +14,7 @@
           expedita praesentium.
         </p>
         <router-link :to="{ name: 'Library' }"
-          >Check out the library now ></router-link
+          >Check out the library now →</router-link
         >
       </div>
     </div>
@@ -31,7 +31,7 @@
           expedita praesentium.
         </p>
         <router-link :to="{ name: 'Library' }"
-          >Check out the library now ></router-link
+          >Check out the library now →</router-link
         >
       </div>
       <div class="image"></div>
@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
 .app {
   height: 100%;
+  width: 100%;
   .home {
     display: flex;
     flex-direction: column;
@@ -59,22 +60,30 @@ export default {
     padding: 4rem 0;
     .container {
       width: 95%;
-      height: 50vh;
-      display: flex;
-      justify-content: center;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       align-items: center;
       border-radius: 35px;
       overflow: hidden;
+      @media screen and (max-width: 900px) {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+      }
       .image {
-        width: 50%;
-        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
         background: rgb(49, 1, 1);
       }
       .text-section {
-        width: 50%;
-        height: 100%;
+        width: 100%;
+        height: auto;
         color: white;
         padding: 30px;
+        background: red;
+        p {
+          font-weight: 400;
+        }
       }
     }
   }
