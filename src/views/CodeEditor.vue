@@ -1,15 +1,15 @@
 <template>
   <div class="grid">
     <div id="html" class="grid-cell">
-      <textarea v-model="htmlCode" name="" id="" cols="30" rows="10"></textarea>
+      <iframe name="" id="" cols="30" rows="10">{{ htmlCode }}</iframe>
       <div class="title">This is a cell</div>
     </div>
     <div id="css" class="grid-cell">
-      <textarea v-model="cssCode" name="" id="" cols="30" rows="10"></textarea>
+      <iframe name="" id="" cols="30" rows="10">{{ cssCode }}</iframe>
       <div class="title">This is a cell</div>
     </div>
     <div id="js" class="grid-cell">
-      <textarea v-model="jsCode" name="" id="" cols="30" rows="10"></textarea>
+      <iframe name="" id="" cols="30" rows="10">{{ jsCode }}</iframe>
       <div class="title">This is a cell</div>
     </div>
     <div id="preview" class="grid-cell">
@@ -78,7 +78,7 @@ export default {
     grid-template-rows: 10fr 1fr;
     overflow: hidden;
 
-    textarea {
+    iframe {
       padding: 10px;
       border: none;
       outline: none;
