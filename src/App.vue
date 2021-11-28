@@ -17,15 +17,7 @@ export default {
   components: {
     Header,
   },
-  created() {
-    window.addEventListener("keyup", this.keyPress);
-  },
   methods: {
-    keyPress(e) {
-      if (e.key === "t") {
-        this.toggle();
-      }
-    },
     toggle() {
       if (this.mode === "dark") {
         this.mode = "light";

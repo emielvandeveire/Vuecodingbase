@@ -36,12 +36,15 @@
       </div>
       <div class="image"></div>
     </div>
+  </div>
+  <div class="plancards">
+    <h1>Plans</h1>
     <PlanCards />
   </div>
 </template>
 
 <script>
-import PlanCards from "../components/PlanCards"
+import PlanCards from "../components/PlanCards";
 
 export default {
   name: "Home",
@@ -88,6 +91,7 @@ export default {
         background: red;
         p {
           font-weight: 400;
+          margin: 2rem 0 5rem 0;
         }
       }
     }
@@ -105,5 +109,11 @@ export default {
 }
 .light .home .container {
   box-shadow: 0px 2px 8px 0px #b0bec5;
+}
+.plancards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 </style>

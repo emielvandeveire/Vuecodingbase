@@ -148,7 +148,7 @@ export default {};
 }
 
 .cards-container .card:nth-child(1) .cards-content h3 {
-  color: #ff0);
+  color: #ff0;
 }
 
 .cards-container .card:nth-child(2) .cards-content h3 {
