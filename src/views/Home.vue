@@ -36,13 +36,18 @@
       </div>
       <div class="image"></div>
     </div>
+    <PlanCards />
   </div>
 </template>
 
 <script>
+import PlanCards from "../components/PlanCards"
+
 export default {
   name: "Home",
-  components: {},
+  components: {
+    PlanCards,
+  },
 };
 </script>
 
