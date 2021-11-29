@@ -77,12 +77,14 @@ export default {
     display: grid;
     grid-template-rows: 10fr 1fr;
     overflow: hidden;
-
+    
     textarea {
       padding: 10px;
       border: none;
       outline: none;
       resize: none;
+      font-family: Menlo, Monaco, 'Courier New', monospace;
+      font-weight: normal;
     }
     .title {
       height: 45px;
@@ -107,6 +109,10 @@ export default {
   .grid {
     .grid-cell {
       box-shadow: 0px 2px 8px 0px rgb(11, 18, 24);
+      textarea {
+        background: #15202b;
+        color: white;
+      }
       .title {
         background: #111a24;
       }
