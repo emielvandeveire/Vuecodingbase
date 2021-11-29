@@ -1,7 +1,7 @@
 <template>
   <div class="grid">
     <div id="html" class="grid-cell">
-      <textarea v-model="htmlCode" name="" id="" cols="30" rows="10"></textarea>
+      <textarea :oninput="writeCode" v-model="htmlCode" name="" id="" cols="30" rows="10"></textarea>
       <div class="title">This is a cell</div>
     </div>
     <div id="css" class="grid-cell">
@@ -12,27 +12,15 @@
       <textarea v-model="jsCode" name="" id="" cols="30" rows="10"></textarea>
       <div class="title">This is a cell</div>
     </div>
-    <div id="preview" class="grid-cell">
-      <div
-        v-html="
-          htmlCode +
-          styleBegin +
-          cssCode +
-          stylEend +
-          scriptBegin +
-          jsCode +
-          scriptEnd
-        "
-      ></div>
-      <div class="title">This is a cell</div>
-    </div>
+    <button @click="writeCode"></button>
+    <iframe id="myframe"></iframe>
+    <div class="title">This is a cell</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "CodeEditor",
-  methods: {},
   data() {
     return {
       htmlCode: "<h1>hi</h1>",
@@ -41,10 +29,17 @@ export default {
       styleBegin: "<style>",
       styleEnd: "</style>",
       scriptBegin: "<script>",
-      scriptEnd: "</"+"script>"
+      scriptEnd: "</" + "script>",
     };
   },
-  computed: {},
+  methods: {
+    writeCode() {
+      var doc = document.getElementById("myframe").contentWindow.document;
+      doc.open();
+      doc.write(this.htmlCode + this.styleBegin + this.cssCode + this.styleEnd + this.scriptBegin + this.jsCode + this.scriptEnd);
+      doc.close();
+    },
+  },
 };
 </script>
 
@@ -77,13 +72,13 @@ export default {
     display: grid;
     grid-template-rows: 10fr 1fr;
     overflow: hidden;
-    
+
     textarea {
       padding: 10px;
       border: none;
       outline: none;
       resize: none;
-      font-family: Menlo, Monaco, 'Courier New', monospace;
+      font-family: Menlo, Monaco, "Courier New", monospace;
       font-weight: normal;
     }
     .title {
