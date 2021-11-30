@@ -1,20 +1,45 @@
 <template>
   <div class="grid">
     <div id="html" class="grid-cell">
-      <textarea :oninput="writeCode" v-model="htmlCode" name="" id="" cols="30" rows="10"></textarea>
-      <div class="title">This is a cell</div>
+      <textarea
+        :oninput="writeCode"
+        v-model="htmlCode"
+        name=""
+        id="htmltextarea"
+        cols="30"
+        rows="10"
+        spellcheck="false"
+      ></textarea>
+      <div class="title">HTML</div>
     </div>
     <div id="css" class="grid-cell">
-      <textarea v-model="cssCode" name="" id="" cols="30" rows="10"></textarea>
-      <div class="title">This is a cell</div>
+      <textarea
+        :oninput="writeCode"
+        v-model="cssCode"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        spellcheck="false"
+      ></textarea>
+      <div class="title">CSS</div>
     </div>
     <div id="js" class="grid-cell">
-      <textarea v-model="jsCode" name="" id="" cols="30" rows="10"></textarea>
+      <textarea
+        :oninput="writeCode"
+        v-model="jsCode"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        spellcheck="false"
+      ></textarea>
+      <div class="title">JS</div>
+    </div>
+    <div class="grid-cell" id="preview">
+      <iframe id="myframe"></iframe>
       <div class="title">This is a cell</div>
     </div>
-    <button @click="writeCode"></button>
-    <iframe id="myframe"></iframe>
-    <div class="title">This is a cell</div>
   </div>
 </template>
 
@@ -25,7 +50,7 @@ export default {
     return {
       htmlCode: "<h1>hi</h1>",
       cssCode: "",
-      jsCode: "",
+      jsCode: "document.querySelector('h1').style.color = 'blue';",
       styleBegin: "<style>",
       styleEnd: "</style>",
       scriptBegin: "<script>",
@@ -36,9 +61,20 @@ export default {
     writeCode() {
       var doc = document.getElementById("myframe").contentWindow.document;
       doc.open();
-      doc.write(this.htmlCode + this.styleBegin + this.cssCode + this.styleEnd + this.scriptBegin + this.jsCode + this.scriptEnd);
+      doc.write(
+        this.htmlCode +
+          this.styleBegin +
+          this.cssCode +
+          this.styleEnd +
+          this.scriptBegin +
+          this.jsCode +
+          this.scriptEnd
+      );
       doc.close();
     },
+  },
+  mounted() {
+    this.writeCode()
   },
 };
 </script>
@@ -66,6 +102,13 @@ export default {
   #preview {
     grid-area: preview;
     grid-template-rows: 50fr 1fr;
+    iframe {
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      word-wrap: break-word;
+    }
   }
   .grid-cell {
     border-radius: 1rem;
@@ -104,12 +147,14 @@ export default {
   .grid {
     .grid-cell {
       box-shadow: 0px 2px 8px 0px rgb(11, 18, 24);
-      textarea {
+      textarea, iframe {
         background: #15202b;
         color: white;
+        transition: none;
       }
       .title {
         background: #111a24;
+        transition: none;
       }
     }
   }
